@@ -1,0 +1,132 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HRAvloniaPr"
+		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500" 
+        x:Class="HRAvloniaPr.MainWindow"
+        Background="LightBlue"
+		Title="HRAvloniaPr" Width="800" Height="500">
+		
+
+	<Window.Styles>
+			<Style Selector="TextBlock">
+				<Setter Property = "FontSize" Value="20"/>
+				<Setter Property = "FontFamily" Value="Segoe UI"/>
+				<Setter Property= "Foreground" Value="White"/>			 
+			</Style>
+			<Style Selector="ComboBoxItem">
+				<Setter Property="Background" Value="LightBlue"/>
+			</Style>
+		</Window.Styles>
+
+
+	
+
+	<StackPanel Margin="15">
+		
+
+		<ListBox x:Name="employeeList" Items="{Binding Path=Employee}"/>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock Text="First name: "  Grid.Column="0" Margin="13" TextAlignment="Left"/>
+			<TextBox x:Name="firstName" Grid.Column="2" Width="190" HorizontalAlignment="Left" Margin="-70, 12, 12, 12" />
+
+			<TextBlock Text="Last name: " Grid.Column="0" Grid.Row="1" Margin="13" TextAlignment="Left"/>
+			<TextBox x:Name="lastName" Grid.Column="2"  Width="190" HorizontalAlignment="Left" Grid.Row="1" Margin="-70, 12, 12, 12"  />
+
+			<TextBlock Text="Phone: " Grid.Column="4" Grid.Row="1" Margin="13" TextAlignment="Left"/>
+			<TextBox x:Name="phone" Grid.Column="6"  Width="190" HorizontalAlignment="Left" Grid.Row="1" Margin="-70, 12, 12, 12"  />
+
+			<TextBlock Text="Email: " Grid.Column="4"  Margin="13" TextAlignment="Left"/>
+			<TextBox x:Name="email" Grid.Column="6"  Width="190" HorizontalAlignment="Left"  Margin="-70, 12, 12, 12"  />
+
+
+
+			<TextBlock Text="Address:  " Grid.Column="0" Grid.Row="3" Margin="13" TextAlignment="Left"/>
+			<TextBox x:Name="address" Grid.Column="2"  Width="200" HorizontalAlignment="Left" Grid.Row="3" Margin="-70, 12, 12, 12"  Height="70"/>
+
+			<TextBlock Text="Nationality: " Grid.Column="0" Grid.Row="7" Margin="13" TextAlignment="Left" Width="122"/>
+			<ComboBox x:Name="fromWhere" Grid.Column="2" Grid.Row="7" Margin="-55, 12, 12, 12" Width="220">
+				<ComboBoxItem>American</ComboBoxItem>
+				<ComboBoxItem>British</ComboBoxItem>
+				<ComboBoxItem>Canadian</ComboBoxItem>
+				<ComboBoxItem>Chinese</ComboBoxItem>
+				<ComboBoxItem>Indian</ComboBoxItem>
+				<ComboBoxItem>Japanese</ComboBoxItem>
+				<ComboBoxItem>Mexican</ComboBoxItem>
+				<ComboBoxItem>European</ComboBoxItem>
+				<ComboBoxItem>Philippines</ComboBoxItem>
+				<ComboBoxItem>Other</ComboBoxItem>
+			</ComboBox>
+
+			<TextBlock Text="Department:  " Grid.Column="0" Grid.Row="4" Margin="13" TextAlignment="Left" Width="122"/>
+			<ComboBox x:Name="jobType" Grid.Column="2" Grid.Row="4" Margin="-55, 12, 12, 12" Width="220">
+				<ComboBoxItem x:Name="marketingT1">Marketing T1</ComboBoxItem>
+				<ComboBoxItem x:Name="marketingT2">Marketing T2</ComboBoxItem>
+				<ComboBoxItem x:Name="marketingT3">Marketing Manager</ComboBoxItem>
+				<ComboBoxItem x:Name="engagementT1"> Engagement T1</ComboBoxItem>
+				<ComboBoxItem x:Name="engagementT2"> Engagement T2</ComboBoxItem>
+				<ComboBoxItem x:Name="engagementT3"> Engagement Manager</ComboBoxItem>
+			</ComboBox>
+
+
+
+			<TextBlock Text="Monthly Pay: " Grid.Column="0" Grid.Row="6" Margin="13" TextAlignment="Left" Width="122"/>
+			<ComboBox x:Name="wageMonth" Grid.Column="2" Grid.Row="6" Margin="-55, 12, 12, 12" Width="220">
+				<ComboBoxItem x:Name="fiveHundred">$500</ComboBoxItem>
+				<ComboBoxItem x:Name="oneThousand">$1000</ComboBoxItem>
+				<ComboBoxItem x:Name="fifteenHundred">$1500</ComboBoxItem>
+				<ComboBoxItem x:Name="twoThousand">$2000</ComboBoxItem>
+				<ComboBoxItem x:Name="threeThousand">$3000</ComboBoxItem>
+				<ComboBoxItem x:Name="fourThousand">$4000</ComboBoxItem>
+				<ComboBoxItem x:Name="fiveThousand">$5000</ComboBoxItem>
+				<ComboBoxItem x:Name="sixThousand">$6000</ComboBoxItem>
+				<ComboBoxItem x:Name="sevenThousand">$7000</ComboBoxItem>
+				<ComboBoxItem x:Name="eightThousand">$8000</ComboBoxItem>
+				<ComboBoxItem x:Name="nineThousand">$9000</ComboBoxItem>
+				<ComboBoxItem x:Name="tenThousand">$10000</ComboBoxItem>
+
+			</ComboBox>
+
+			<TextBlock Text="Gender: " Grid.Column="0" Grid.Row="8" Margin="13" TextAlignment="Left" Width="122"/>
+			<ComboBox x:Name="gender" Grid.Column="2" Grid.Row="8" Margin="-55, 12, 12, 12" Width="220">
+				<ComboBoxItem>Male</ComboBoxItem>
+				<ComboBoxItem>Female</ComboBoxItem>
+			</ComboBox>
+			
+			<Button Content="Reset" Click="resetBtn_Click" Grid.Row="8" Grid.Column="5" Width="95" FontSize="22" Height="40" Margin="-20" />
+			<Button Content="Submit" Click="createJsonFileBtn_Click" Grid.Row="8" Grid.Column="7" Width="95" FontSize="22" Height="40" Margin="-20"/>
+			
+		</Grid>
+		</StackPanel>
+
+		
+	
+
+
+
+
+</Window>
